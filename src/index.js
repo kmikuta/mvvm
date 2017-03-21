@@ -1,3 +1,1 @@
-import MainModule from './main/startup'
-
-new MainModule()
+import './main/startup'

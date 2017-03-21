@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot --quiet --port 4000",
+    "dev": "webpack-dev-server --inline --hot --quiet --port 4000 --open",
     "build": "rm -rf build/* && webpack --progress --hide-modules --config webpack.production.js",
     "test": "karma start karma.conf.js"
   },
   "dependencies": {
-    "izi-js": "1.7.1"
+    "izi-vue": "^1.0.2",
+    "vue": "^1.0.8"
   },
   "devDependencies": {
     "babel-core": "^6.1.21",
