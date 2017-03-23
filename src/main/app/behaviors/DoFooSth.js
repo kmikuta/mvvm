@@ -1,10 +1,10 @@
-import {izi} from '../../../core/common'
+import FooModel from '../model/FooModel'
+import {model} from '../../../core/decorators'
 
 export default class DoFooSth {
 
-  constructor() {
-    this.model = izi.inject('FooModel');
-  }
+  @model(FooModel)
+  model
 
   changeFooToBar() {
     this.model.foo = 'Bar';

@@ -12,7 +12,7 @@ export default {
   },
   template: tpl,
   ready() {
-    console.log(this.behavior)
-    console.log(this.model)
+    // console.log(this.behavior)
+    // console.log(this.model)
   }
 }
