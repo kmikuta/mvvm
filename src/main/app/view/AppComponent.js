@@ -1,6 +1,6 @@
 import {iziInjectMixin} from '../../../core/common';
 import tpl from './appComponent.tpl'
-import './appComponent.css' // should be less
+import './appComponent.less'
 
 export default {
   mixins: [iziInjectMixin],
