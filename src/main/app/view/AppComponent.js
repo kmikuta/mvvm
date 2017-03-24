@@ -1,18 +1,20 @@
-import {iziInjectMixin} from '../../../core/common';
 import tpl from './appComponent.tpl'
 import './appComponent.less'
+import {BaseView} from '../../../core/common'
+import {viewInject, viewModel} from '../../../core/decorators'
 
-export default {
-  mixins: [iziInjectMixin],
-  iziInject: {
-    behavior: 'DoFooSth',
-    data: {
-      model: 'FooModel'
-    }
-  },
+export default new BaseView({
+
   template: tpl,
+
+  @viewModel('FooModel')
+  model: null,
+
+  @viewInject('DoFooSth')
+  behavior: null,
+
   ready() {
-    // console.log(this.behavior)
-    // console.log(this.model)
+    console.log('Behavior in view', this.behavior)
+    console.log('Model in view', this.model)
   }
-}
+})
